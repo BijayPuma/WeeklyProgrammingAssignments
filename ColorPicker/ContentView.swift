@@ -28,18 +28,18 @@ struct ContentView: View {
             VStack {
                 Text("Red \(Int(redValue))")
                 HStack{
-                    Slider(value: $redValue, in: 1.0...255.0)
+                    Slider(value: $redValue, in: 0.0...255.0)
                     Text("255")
                 }
                 Text("Green \(Int(greenValue))")
                 HStack{
-                    Slider(value: $greenValue, in: 1.0...255.0)
+                    Slider(value: $greenValue, in: 0.0...255.0)
                     Text("255")
                 }
                 
                 Text("Blue \(Int(blueValue))")
                 HStack{
-                    Slider(value: $blueValue, in: 1.0...255.0)
+                    Slider(value: $blueValue, in: 0.0...255.0)
                     Text("255")
                 }
             }
@@ -47,18 +47,33 @@ struct ContentView: View {
     
             Button {
                 self.setColor = Color(red: redValue / 255, green: greenValue / 255, blue: blueValue / 255)
+                print(redValue)
             }label: {
                 Text("Set Color")
                     .frame(width: 100, height: 40)
-                    .background(.blue)
+                    .background(
+                        ZStack {
+                            Color.blue
+                            LinearGradient(gradient: Gradient(colors: [.purple.opacity(0.7), .clear]), startPoint: .top, endPoint: .bottom)
+                        }
+                    )
                     .foregroundColor(.white)
+                    .bold()
                     .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(.black.opacity(0.5), lineWidth: 2)
+                      
+                    }
+                 
+                   
             }
         }
         .padding()
     }
 
 }
+
 
 #Preview {
     ContentView()
