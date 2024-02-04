@@ -12,6 +12,15 @@
 		18D775C722AD944400AE281E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D775C622AD944400AE281E /* Assets.xcassets */; };
 		18D775CA22AD944400AE281E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D775C922AD944400AE281E /* Preview Assets.xcassets */; };
 		18D775D822AD963800AE281E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D775DA22AD963800AE281E /* LaunchScreen.storyboard */; };
+		C7550A282B6F7BA100EB9305 /* ColorDisplayRectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7550A272B6F7BA100EB9305 /* ColorDisplayRectView.swift */; };
+		C7550A2B2B6F7F3500EB9305 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7550A2A2B6F7F3500EB9305 /* Constants.swift */; };
+		C7550A2D2B6F812000EB9305 /* HeaderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7550A2C2B6F812000EB9305 /* HeaderTextView.swift */; };
+		C7550A2F2B6F828D00EB9305 /* SliderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7550A2E2B6F828D00EB9305 /* SliderTextView.swift */; };
+		C7550A312B6F83E700EB9305 /* ButtonSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7550A302B6F83E700EB9305 /* ButtonSetView.swift */; };
+		C7550A332B6F848800EB9305 /* RedSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7550A322B6F848800EB9305 /* RedSliderView.swift */; };
+		C7550A362B6F857700EB9305 /* GreenSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7550A352B6F857700EB9305 /* GreenSliderView.swift */; };
+		C7550A382B6F858000EB9305 /* BlueSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7550A372B6F858000EB9305 /* BlueSliderView.swift */; };
+		C7550A3A2B6F85F300EB9305 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7550A392B6F85F300EB9305 /* SliderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +31,15 @@
 		18D775C922AD944400AE281E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		18D775CE22AD944400AE281E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18D775DE22AD96B400AE281E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C7550A272B6F7BA100EB9305 /* ColorDisplayRectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDisplayRectView.swift; sourceTree = "<group>"; };
+		C7550A2A2B6F7F3500EB9305 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C7550A2C2B6F812000EB9305 /* HeaderTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTextView.swift; sourceTree = "<group>"; };
+		C7550A2E2B6F828D00EB9305 /* SliderTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderTextView.swift; sourceTree = "<group>"; };
+		C7550A302B6F83E700EB9305 /* ButtonSetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSetView.swift; sourceTree = "<group>"; };
+		C7550A322B6F848800EB9305 /* RedSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedSliderView.swift; sourceTree = "<group>"; };
+		C7550A352B6F857700EB9305 /* GreenSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenSliderView.swift; sourceTree = "<group>"; };
+		C7550A372B6F858000EB9305 /* BlueSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueSliderView.swift; sourceTree = "<group>"; };
+		C7550A392B6F85F300EB9305 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,11 +74,12 @@
 		18D775BF22AD944300AE281E /* ColorPicker */ = {
 			isa = PBXGroup;
 			children = (
-				1839F4AF25190F2A00BB00F1 /* AppMain.swift */,
-				18D775C422AD944300AE281E /* ContentView.swift */,
-				18D775C622AD944400AE281E /* Assets.xcassets */,
+				C7550A292B6F7F2700EB9305 /* Models */,
+				C7550A252B6F7A2900EB9305 /* Views */,
 				18D775DA22AD963800AE281E /* LaunchScreen.storyboard */,
+				18D775C622AD944400AE281E /* Assets.xcassets */,
 				18D775CE22AD944400AE281E /* Info.plist */,
+				1839F4AF25190F2A00BB00F1 /* AppMain.swift */,
 				18D775C822AD944400AE281E /* Preview Content */,
 			);
 			path = ColorPicker;
@@ -72,6 +91,38 @@
 				18D775C922AD944400AE281E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C7550A252B6F7A2900EB9305 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C7550A342B6F854B00EB9305 /* SliderView */,
+				18D775C422AD944300AE281E /* ContentView.swift */,
+				C7550A272B6F7BA100EB9305 /* ColorDisplayRectView.swift */,
+				C7550A2C2B6F812000EB9305 /* HeaderTextView.swift */,
+				C7550A302B6F83E700EB9305 /* ButtonSetView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C7550A292B6F7F2700EB9305 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C7550A2A2B6F7F3500EB9305 /* Constants.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C7550A342B6F854B00EB9305 /* SliderView */ = {
+			isa = PBXGroup;
+			children = (
+				C7550A2E2B6F828D00EB9305 /* SliderTextView.swift */,
+				C7550A322B6F848800EB9305 /* RedSliderView.swift */,
+				C7550A352B6F857700EB9305 /* GreenSliderView.swift */,
+				C7550A372B6F858000EB9305 /* BlueSliderView.swift */,
+				C7550A392B6F85F300EB9305 /* SliderView.swift */,
+			);
+			path = SliderView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,7 +154,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				ORGANIZATIONNAME = Kodeco;
 				TargetAttributes = {
 					18D775BC22AD944300AE281E = {
@@ -169,8 +220,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7550A2D2B6F812000EB9305 /* HeaderTextView.swift in Sources */,
+				C7550A362B6F857700EB9305 /* GreenSliderView.swift in Sources */,
+				C7550A282B6F7BA100EB9305 /* ColorDisplayRectView.swift in Sources */,
+				C7550A382B6F858000EB9305 /* BlueSliderView.swift in Sources */,
+				C7550A3A2B6F85F300EB9305 /* SliderView.swift in Sources */,
+				C7550A2F2B6F828D00EB9305 /* SliderTextView.swift in Sources */,
 				18D775C522AD944300AE281E /* ContentView.swift in Sources */,
 				1839F4B025190F2A00BB00F1 /* AppMain.swift in Sources */,
+				C7550A2B2B6F7F3500EB9305 /* Constants.swift in Sources */,
+				C7550A312B6F83E700EB9305 /* ButtonSetView.swift in Sources */,
+				C7550A332B6F848800EB9305 /* RedSliderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +285,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -286,6 +347,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
