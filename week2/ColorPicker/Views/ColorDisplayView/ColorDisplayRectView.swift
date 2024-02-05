@@ -17,7 +17,8 @@ struct ColorDisplayRectView: View {
     }
 }
 
+
 #Preview {
-  ColorDisplayRectView(foregroundColor: .constant(.black))
+    ColorDisplayRectView(foregroundColor: .constant(.black))
 }
 

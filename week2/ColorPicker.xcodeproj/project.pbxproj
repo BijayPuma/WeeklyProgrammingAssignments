@@ -96,11 +96,11 @@
 		C7550A252B6F7A2900EB9305 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C7550A342B6F854B00EB9305 /* SliderView */,
 				18D775C422AD944300AE281E /* ContentView.swift */,
-				C7550A272B6F7BA100EB9305 /* ColorDisplayRectView.swift */,
 				C7550A2C2B6F812000EB9305 /* HeaderTextView.swift */,
-				C7550A302B6F83E700EB9305 /* ButtonSetView.swift */,
+				C7CCD7A52B712B3A0090D12A /* ButtonView */,
+				C7CCD7A42B712A9F0090D12A /* ColorDisplayView */,
+				C7550A342B6F854B00EB9305 /* SliderView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -123,6 +123,22 @@
 				C7550A392B6F85F300EB9305 /* SliderView.swift */,
 			);
 			path = SliderView;
+			sourceTree = "<group>";
+		};
+		C7CCD7A42B712A9F0090D12A /* ColorDisplayView */ = {
+			isa = PBXGroup;
+			children = (
+				C7550A272B6F7BA100EB9305 /* ColorDisplayRectView.swift */,
+			);
+			path = ColorDisplayView;
+			sourceTree = "<group>";
+		};
+		C7CCD7A52B712B3A0090D12A /* ButtonView */ = {
+			isa = PBXGroup;
+			children = (
+				C7550A302B6F83E700EB9305 /* ButtonSetView.swift */,
+			);
+			path = ButtonView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,7 +388,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"ColorPicker/Preview Content\"";
-				DEVELOPMENT_TEAM = BBK84N9JY9;
+				DEVELOPMENT_TEAM = 2957CWG7DB;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ColorPicker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -393,7 +409,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"ColorPicker/Preview Content\"";
-				DEVELOPMENT_TEAM = BBK84N9JY9;
+				DEVELOPMENT_TEAM = 2957CWG7DB;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ColorPicker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;

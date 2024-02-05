@@ -16,28 +16,13 @@ struct ContentView: View {
       Color("BackgroundColor").ignoresSafeArea()
       
       if horizontalSizeClass == .compact && verticalSizeClass == .regular {
-        VStack {
-          HeaderTextView(text: "Color Picker")
-          ColorDisplayRectView(foregroundColor: $foregroundColor)
-          SliderView(redColor: $redColor, greenColor: $greenColor, blueColor: $blueColor)
-      
-          ButtonSetView(redColor: $redColor, greenColor: $greenColor, blueColor: $blueColor, foregroundColor: $foregroundColor)
-        }
-       .padding(20)
-      } else {
-        HStack {
-          VStack {
-            HeaderTextView(text: "Color Picker")
-            ColorDisplayRectView(foregroundColor: $foregroundColor)
-          }
-          .padding()
-          VStack {
-            SliderView(redColor: $redColor, greenColor: $greenColor, blueColor: $blueColor)
         
-            ButtonSetView(redColor: $redColor, greenColor: $greenColor, blueColor: $blueColor, foregroundColor: $foregroundColor)
-          }
-          .padding()
-        }
+        ColorPickerPortraitView(redColor: $redColor, greenColor: $greenColor, blueColor: $blueColor, foregroundColor: $foregroundColor)
+      } 
+      else
+      
+      {
+        ColorPickerLandscapeView(redColor: $redColor, greenColor: $greenColor, blueColor: $blueColor, foregroundColor: $foregroundColor)
       }
 
     }
@@ -45,6 +30,47 @@ struct ContentView: View {
   }
 }
 
+
+struct ColorPickerPortraitView: View {
+  @Binding var redColor: Double
+  @Binding var greenColor: Double
+  @Binding var blueColor: Double
+  @Binding var foregroundColor: Color
+  
+  var body: some View {
+    VStack {
+      HeaderTextView(text: "Color Picker")
+      ColorDisplayRectView(foregroundColor: $foregroundColor)
+      SliderView(redColor: $redColor, greenColor: $greenColor, blueColor: $blueColor)
+  
+      ButtonSetView(redColor: $redColor, greenColor: $greenColor, blueColor: $blueColor, foregroundColor: $foregroundColor, text: "Set Color")
+    }
+   .padding(20)
+  }
+}
+
+
+struct ColorPickerLandscapeView: View {
+  @Binding var redColor: Double
+  @Binding var greenColor: Double
+  @Binding var blueColor: Double
+  @Binding var foregroundColor: Color
+  var body: some View {
+    HStack {
+      VStack {
+        HeaderTextView(text: "Color Picker")
+        ColorDisplayRectView(foregroundColor: $foregroundColor)
+      }
+      .padding()
+      VStack {
+        SliderView(redColor: $redColor, greenColor: $greenColor, blueColor: $blueColor)
+    
+        ButtonSetView(redColor: $redColor, greenColor: $greenColor, blueColor: $blueColor, foregroundColor: $foregroundColor, text: "Set Color")
+      }
+      .padding()
+    }
+  }
+}
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
