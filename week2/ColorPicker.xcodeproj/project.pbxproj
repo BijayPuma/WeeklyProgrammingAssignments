@@ -21,6 +21,9 @@
 		C7550A362B6F857700EB9305 /* GreenSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7550A352B6F857700EB9305 /* GreenSliderView.swift */; };
 		C7550A382B6F858000EB9305 /* BlueSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7550A372B6F858000EB9305 /* BlueSliderView.swift */; };
 		C7550A3A2B6F85F300EB9305 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7550A392B6F85F300EB9305 /* SliderView.swift */; };
+		C7CCD7A92B72E27A0090D12A /* ColorPickerPortraitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CCD7A82B72E27A0090D12A /* ColorPickerPortraitView.swift */; };
+		C7CCD7AB2B72E2A80090D12A /* ColorPickerLandscapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CCD7AA2B72E2A80090D12A /* ColorPickerLandscapeView.swift */; };
+		C7CCD7AD2B72E6510090D12A /* ButtonTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CCD7AC2B72E6510090D12A /* ButtonTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		C7550A352B6F857700EB9305 /* GreenSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenSliderView.swift; sourceTree = "<group>"; };
 		C7550A372B6F858000EB9305 /* BlueSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueSliderView.swift; sourceTree = "<group>"; };
 		C7550A392B6F85F300EB9305 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
+		C7CCD7A82B72E27A0090D12A /* ColorPickerPortraitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerPortraitView.swift; sourceTree = "<group>"; };
+		C7CCD7AA2B72E2A80090D12A /* ColorPickerLandscapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerLandscapeView.swift; sourceTree = "<group>"; };
+		C7CCD7AC2B72E6510090D12A /* ButtonTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,7 @@
 		C7550A252B6F7A2900EB9305 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C7CCD7A72B72DFFC0090D12A /* OrientationViews */,
 				18D775C422AD944300AE281E /* ContentView.swift */,
 				C7550A2C2B6F812000EB9305 /* HeaderTextView.swift */,
 				C7CCD7A52B712B3A0090D12A /* ButtonView */,
@@ -137,8 +144,18 @@
 			isa = PBXGroup;
 			children = (
 				C7550A302B6F83E700EB9305 /* ButtonSetView.swift */,
+				C7CCD7AC2B72E6510090D12A /* ButtonTextView.swift */,
 			);
 			path = ButtonView;
+			sourceTree = "<group>";
+		};
+		C7CCD7A72B72DFFC0090D12A /* OrientationViews */ = {
+			isa = PBXGroup;
+			children = (
+				C7CCD7A82B72E27A0090D12A /* ColorPickerPortraitView.swift */,
+				C7CCD7AA2B72E2A80090D12A /* ColorPickerLandscapeView.swift */,
+			);
+			path = OrientationViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,8 +262,11 @@
 				18D775C522AD944300AE281E /* ContentView.swift in Sources */,
 				1839F4B025190F2A00BB00F1 /* AppMain.swift in Sources */,
 				C7550A2B2B6F7F3500EB9305 /* Constants.swift in Sources */,
+				C7CCD7A92B72E27A0090D12A /* ColorPickerPortraitView.swift in Sources */,
 				C7550A312B6F83E700EB9305 /* ButtonSetView.swift in Sources */,
+				C7CCD7AD2B72E6510090D12A /* ButtonTextView.swift in Sources */,
 				C7550A332B6F848800EB9305 /* RedSliderView.swift in Sources */,
+				C7CCD7AB2B72E2A80090D12A /* ColorPickerLandscapeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

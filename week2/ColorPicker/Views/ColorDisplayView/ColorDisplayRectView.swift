@@ -3,7 +3,7 @@ import SwiftUI
 
 struct ColorDisplayRectView: View {
   @Binding var foregroundColor: Color
-  let colorDisplayStroke = CGFloat(6)
+  private let colorDisplayStroke: CGFloat = 6
   
     var body: some View {
       RoundedRectangle(cornerRadius: Constants.roundedRectCornerRadius)

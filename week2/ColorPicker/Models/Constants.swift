@@ -3,13 +3,13 @@
 import Foundation
 
 enum Constants {
-  public static let roundedRectCornerRadius = CGFloat(0)
-  public static let maxRGBValue = Double(255)
-  public static let sliderWidth = Double(300)
-  public static let sliderTextWidth = Double(50)
-  public static let initialRedColorValue = Double(250)
-  public static let initialGreenColorValue = Double(100)
-  public static let initialBlueColorValue = Double(50)
+  public static let roundedRectCornerRadius: CGFloat = 0
+  public static let maxRGBValue = 255.0
+  public static let sliderWidth = 300.0
+  public static let sliderTextWidth = 50.0
+  public static let initialRedColorValue = 250.0
+  public static let initialGreenColorValue = 100.0
+  public static let initialBlueColorValue = 50.0
 
 
 }
