@@ -155,3 +155,40 @@ class Student {
 let student = Student(person: Person(firstName: "Bijay", lastName: "Rai", age: 18), grades: [94, 99, 81, 100, 79])
 student.details()
 
+print("*******************************************************************)
+
+struct Square {
+  var side: Int
+  func area() -> Int {
+    return side * side
+  }
+}
+
+class Rectangle {
+  var length: Int
+  var width: Int
+  init(length: Int, width: Int) {
+    self.length = length
+    self.width = width
+  }
+  func area() -> Int {
+    return length * width
+  }
+}
+
+var square1 = Square(side: 4)
+var square2 = square1
+square2.side = 5
+
+
+print("Area: square1 - \(square1.area()) square2 - \(square2.area())")
+      // square1 and square2 have two different output because Square is a struct which is a value type. When you create an instance from any Struct, it copies and create a new one. For example, if we create two instances, they are independent of each other, meaning changing the side on one instance does not effect to other.
+      
+var rectangle1 = Rectangle(length: 4, width: 4)
+var rectangle2 = rectangle1
+rectangle2.length = 5
+print("Area: rectangle1 - \(rectangle1.area()) rectangle2 - \(rectangle2.area())")
+
+// rectangle1 and rectangle2 have the same area/result because Rectangle is a class which is a reference type. When we assign rectangle1 to rectangle2, we are not creating a new instance of Rectangle, instead rectangle2 reference to the same instance that rectangle1 points to which means rectangle1 and rectangle2 are two reference to the same object.
+
+
