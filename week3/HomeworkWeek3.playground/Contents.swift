@@ -155,7 +155,7 @@ class Student {
 let student = Student(person: Person(firstName: "Bijay", lastName: "Rai", age: 18), grades: [94, 99, 81, 100, 79])
 student.details()
 
-print("*******************************************************************)
+print("*******************************************************************")
 
 struct Square {
   var side: Int
