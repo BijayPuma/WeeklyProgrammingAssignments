@@ -138,3 +138,51 @@ struct Square {
 var testSqure = Square(sideLength: 3)
 print("SquareArea: \(testSqure.area)")
 
+
+// Part3
+
+protocol Shape {
+    func calculateArea() -> Double
+}
+
+struct Circle: Shape {
+    var radius: Double
+    
+    func calculateArea() -> Double {
+        .pi * radius * radius
+    }
+}
+
+struct Rectangle: Shape {
+    var length: Double
+    var width: Double
+    
+    func calculateArea() -> Double {
+        length * width
+    }
+}
+
+let circle = Circle(radius: 4)
+print("CircleArea: \(circle.calculateArea().rounded())")
+
+let rectangle = Rectangle(length: 5, width: 2)
+print("RectangleArea: \(rectangle.calculateArea())")
+
+
+struct Sphere: Shape {
+    var radius: Double
+    
+    func calculateArea() -> Double {
+        4 * .pi * radius * radius
+    }
+    
+    func calculateVolue() -> Double {
+        (4.0/3.0) * .pi * radius * radius * radius
+    }
+  
+}
+
+let testSphere = Sphere(radius: 4)
+
+print("SphereArea: \(testSphere.calculateArea().rounded())")
+print("SphereVolume: \(testSphere.calculateVolue().rounded())")
