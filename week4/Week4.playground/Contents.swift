@@ -169,20 +169,25 @@ let rectangle = Rectangle(length: 5, width: 2)
 print("RectangleArea: \(rectangle.calculateArea())")
 
 
+
+extension Shape {
+    func calculateVolume(radius: Double) -> Double {
+        (4.0/3.0) * .pi * radius * radius * radius
+    }
+}
+
+
 struct Sphere: Shape {
     var radius: Double
     
     func calculateArea() -> Double {
         4 * .pi * radius * radius
     }
-    
-    func calculateVolue() -> Double {
-        (4.0/3.0) * .pi * radius * radius * radius
-    }
-  
 }
 
-let testSphere = Sphere(radius: 4)
 
+let testSphere = Sphere(radius: 4)
 print("SphereArea: \(testSphere.calculateArea().rounded())")
-print("SphereVolume: \(testSphere.calculateVolue().rounded())")
+
+let sphereVolume =  Sphere(radius: 3)
+print("SphereVolume: \(sphereVolume.calculateVolume(radius: 4).rounded())")
