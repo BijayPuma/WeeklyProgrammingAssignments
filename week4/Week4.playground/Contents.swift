@@ -171,8 +171,8 @@ print("RectangleArea: \(rectangle.calculateArea())")
 
 
 extension Shape {
-    func calculateVolume(radius: Double) -> Double {
-        (4.0/3.0) * .pi * radius * radius * radius
+    func calculateVolume() -> Double {
+        return 0
     }
 }
 
@@ -183,6 +183,10 @@ struct Sphere: Shape {
     func calculateArea() -> Double {
         4 * .pi * radius * radius
     }
+    
+    func calculateVolume() ->Double {
+        (4.0/3.0) * .pi * radius * radius * radius
+    }
 }
 
 
@@ -190,4 +194,4 @@ let testSphere = Sphere(radius: 4)
 print("SphereArea: \(testSphere.calculateArea().rounded())")
 
 let sphereVolume =  Sphere(radius: 3)
-print("SphereVolume: \(sphereVolume.calculateVolume(radius: 4).rounded())")
+print("SphereVolume: \(sphereVolume.calculateVolume().rounded())")
