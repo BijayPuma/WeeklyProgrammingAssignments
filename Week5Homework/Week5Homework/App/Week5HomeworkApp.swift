@@ -12,6 +12,7 @@ struct Week5HomeworkApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(ModelData())
         }
     }
 }

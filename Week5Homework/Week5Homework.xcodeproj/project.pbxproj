@@ -11,6 +11,13 @@
 		C76570BE2B8BB31600A4CCD6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76570BD2B8BB31600A4CCD6 /* ContentView.swift */; };
 		C76570C02B8BB31700A4CCD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C76570BF2B8BB31700A4CCD6 /* Assets.xcassets */; };
 		C76570C32B8BB31700A4CCD6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C76570C22B8BB31700A4CCD6 /* Preview Assets.xcassets */; };
+		C76570CA2B8BBA5C00A4CCD6 /* IsCompletedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76570C92B8BBA5C00A4CCD6 /* IsCompletedButton.swift */; };
+		C76570CC2B8BBBE600A4CCD6 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76570CB2B8BBBE600A4CCD6 /* Task.swift */; };
+		C76570CE2B8BBE8F00A4CCD6 /* DetailTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76570CD2B8BBE8F00A4CCD6 /* DetailTaskView.swift */; };
+		C76570D02B8BC4FE00A4CCD6 /* MyTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76570CF2B8BC4FE00A4CCD6 /* MyTasksView.swift */; };
+		C76570D22B8BDA3800A4CCD6 /* TaskRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76570D12B8BDA3800A4CCD6 /* TaskRowView.swift */; };
+		C76570D42B8BEA8200A4CCD6 /* AddNewTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76570D32B8BEA8200A4CCD6 /* AddNewTaskView.swift */; };
+		C76570D92B8C137F00A4CCD6 /* AddNewTaskBotton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76570D82B8C137F00A4CCD6 /* AddNewTaskBotton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +26,13 @@
 		C76570BD2B8BB31600A4CCD6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C76570BF2B8BB31700A4CCD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C76570C22B8BB31700A4CCD6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C76570C92B8BBA5C00A4CCD6 /* IsCompletedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsCompletedButton.swift; sourceTree = "<group>"; };
+		C76570CB2B8BBBE600A4CCD6 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		C76570CD2B8BBE8F00A4CCD6 /* DetailTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTaskView.swift; sourceTree = "<group>"; };
+		C76570CF2B8BC4FE00A4CCD6 /* MyTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTasksView.swift; sourceTree = "<group>"; };
+		C76570D12B8BDA3800A4CCD6 /* TaskRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRowView.swift; sourceTree = "<group>"; };
+		C76570D32B8BEA8200A4CCD6 /* AddNewTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewTaskView.swift; sourceTree = "<group>"; };
+		C76570D82B8C137F00A4CCD6 /* AddNewTaskBotton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewTaskBotton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +65,9 @@
 		C76570BA2B8BB31600A4CCD6 /* Week5Homework */ = {
 			isa = PBXGroup;
 			children = (
-				C76570BB2B8BB31600A4CCD6 /* Week5HomeworkApp.swift */,
-				C76570BD2B8BB31600A4CCD6 /* ContentView.swift */,
-				C76570BF2B8BB31700A4CCD6 /* Assets.xcassets */,
+				C76570D52B8C10A100A4CCD6 /* App */,
+				C76570D62B8C10AB00A4CCD6 /* Model */,
+				C76570D72B8C10B000A4CCD6 /* View */,
 				C76570C12B8BB31700A4CCD6 /* Preview Content */,
 			);
 			path = Week5Homework;
@@ -65,6 +79,53 @@
 				C76570C22B8BB31700A4CCD6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C76570D52B8C10A100A4CCD6 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C76570BB2B8BB31600A4CCD6 /* Week5HomeworkApp.swift */,
+				C76570BF2B8BB31700A4CCD6 /* Assets.xcassets */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C76570D62B8C10AB00A4CCD6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C76570CB2B8BBBE600A4CCD6 /* Task.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C76570D72B8C10B000A4CCD6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C76570BD2B8BB31600A4CCD6 /* ContentView.swift */,
+				C76570DA2B8C157500A4CCD6 /* MainViews */,
+				C76570DB2B8C159D00A4CCD6 /* SubViews */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C76570DA2B8C157500A4CCD6 /* MainViews */ = {
+			isa = PBXGroup;
+			children = (
+				C76570CF2B8BC4FE00A4CCD6 /* MyTasksView.swift */,
+				C76570D32B8BEA8200A4CCD6 /* AddNewTaskView.swift */,
+				C76570CD2B8BBE8F00A4CCD6 /* DetailTaskView.swift */,
+			);
+			path = MainViews;
+			sourceTree = "<group>";
+		};
+		C76570DB2B8C159D00A4CCD6 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				C76570C92B8BBA5C00A4CCD6 /* IsCompletedButton.swift */,
+				C76570D12B8BDA3800A4CCD6 /* TaskRowView.swift */,
+				C76570D82B8C137F00A4CCD6 /* AddNewTaskBotton.swift */,
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +198,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C76570D42B8BEA8200A4CCD6 /* AddNewTaskView.swift in Sources */,
+				C76570D92B8C137F00A4CCD6 /* AddNewTaskBotton.swift in Sources */,
+				C76570CC2B8BBBE600A4CCD6 /* Task.swift in Sources */,
+				C76570D02B8BC4FE00A4CCD6 /* MyTasksView.swift in Sources */,
+				C76570CA2B8BBA5C00A4CCD6 /* IsCompletedButton.swift in Sources */,
+				C76570D22B8BDA3800A4CCD6 /* TaskRowView.swift in Sources */,
 				C76570BE2B8BB31600A4CCD6 /* ContentView.swift in Sources */,
 				C76570BC2B8BB31600A4CCD6 /* Week5HomeworkApp.swift in Sources */,
+				C76570CE2B8BBE8F00A4CCD6 /* DetailTaskView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
