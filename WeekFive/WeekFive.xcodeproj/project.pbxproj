@@ -11,6 +11,13 @@
 		C7DB6E082B8C50FE00EC2309 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DB6E072B8C50FE00EC2309 /* ContentView.swift */; };
 		C7DB6E0A2B8C50FF00EC2309 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7DB6E092B8C50FF00EC2309 /* Assets.xcassets */; };
 		C7DB6E0D2B8C50FF00EC2309 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7DB6E0C2B8C50FF00EC2309 /* Preview Assets.xcassets */; };
+		C7DB6E172B8C51B000EC2309 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DB6E162B8C51B000EC2309 /* Task.swift */; };
+		C7DB6E192B8C51B800EC2309 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DB6E182B8C51B800EC2309 /* ModelData.swift */; };
+		C7DB6E1D2B8C51F000EC2309 /* MyTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DB6E1C2B8C51F000EC2309 /* MyTasksView.swift */; };
+		C7DB6E1F2B8C51FD00EC2309 /* AddNewTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DB6E1E2B8C51FD00EC2309 /* AddNewTaskView.swift */; };
+		C7DB6E212B8C520700EC2309 /* DetailTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DB6E202B8C520700EC2309 /* DetailTaskView.swift */; };
+		C7DB6E232B8C521200EC2309 /* TaskRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DB6E222B8C521200EC2309 /* TaskRowView.swift */; };
+		C7DB6E252B8C521F00EC2309 /* AddNewTaskBotton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DB6E242B8C521F00EC2309 /* AddNewTaskBotton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +26,13 @@
 		C7DB6E072B8C50FE00EC2309 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C7DB6E092B8C50FF00EC2309 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7DB6E0C2B8C50FF00EC2309 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C7DB6E162B8C51B000EC2309 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		C7DB6E182B8C51B800EC2309 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		C7DB6E1C2B8C51F000EC2309 /* MyTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTasksView.swift; sourceTree = "<group>"; };
+		C7DB6E1E2B8C51FD00EC2309 /* AddNewTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewTaskView.swift; sourceTree = "<group>"; };
+		C7DB6E202B8C520700EC2309 /* DetailTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTaskView.swift; sourceTree = "<group>"; };
+		C7DB6E222B8C521200EC2309 /* TaskRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRowView.swift; sourceTree = "<group>"; };
+		C7DB6E242B8C521F00EC2309 /* AddNewTaskBotton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewTaskBotton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +65,9 @@
 		C7DB6E042B8C50FE00EC2309 /* WeekFive */ = {
 			isa = PBXGroup;
 			children = (
-				C7DB6E052B8C50FE00EC2309 /* WeekFiveApp.swift */,
-				C7DB6E072B8C50FE00EC2309 /* ContentView.swift */,
-				C7DB6E092B8C50FF00EC2309 /* Assets.xcassets */,
+				C7DB6E132B8C518200EC2309 /* App */,
+				C7DB6E142B8C518A00EC2309 /* Model */,
+				C7DB6E152B8C519200EC2309 /* View */,
 				C7DB6E0B2B8C50FF00EC2309 /* Preview Content */,
 			);
 			path = WeekFive;
@@ -65,6 +79,53 @@
 				C7DB6E0C2B8C50FF00EC2309 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C7DB6E132B8C518200EC2309 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C7DB6E052B8C50FE00EC2309 /* WeekFiveApp.swift */,
+				C7DB6E092B8C50FF00EC2309 /* Assets.xcassets */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C7DB6E142B8C518A00EC2309 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C7DB6E162B8C51B000EC2309 /* Task.swift */,
+				C7DB6E182B8C51B800EC2309 /* ModelData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C7DB6E152B8C519200EC2309 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C7DB6E072B8C50FE00EC2309 /* ContentView.swift */,
+				C7DB6E1A2B8C51CA00EC2309 /* MainViews */,
+				C7DB6E1B2B8C51D400EC2309 /* SubViews */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C7DB6E1A2B8C51CA00EC2309 /* MainViews */ = {
+			isa = PBXGroup;
+			children = (
+				C7DB6E1C2B8C51F000EC2309 /* MyTasksView.swift */,
+				C7DB6E1E2B8C51FD00EC2309 /* AddNewTaskView.swift */,
+				C7DB6E202B8C520700EC2309 /* DetailTaskView.swift */,
+			);
+			path = MainViews;
+			sourceTree = "<group>";
+		};
+		C7DB6E1B2B8C51D400EC2309 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				C7DB6E222B8C521200EC2309 /* TaskRowView.swift */,
+				C7DB6E242B8C521F00EC2309 /* AddNewTaskBotton.swift */,
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +198,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7DB6E1F2B8C51FD00EC2309 /* AddNewTaskView.swift in Sources */,
+				C7DB6E252B8C521F00EC2309 /* AddNewTaskBotton.swift in Sources */,
 				C7DB6E082B8C50FE00EC2309 /* ContentView.swift in Sources */,
+				C7DB6E232B8C521200EC2309 /* TaskRowView.swift in Sources */,
+				C7DB6E192B8C51B800EC2309 /* ModelData.swift in Sources */,
+				C7DB6E172B8C51B000EC2309 /* Task.swift in Sources */,
 				C7DB6E062B8C50FE00EC2309 /* WeekFiveApp.swift in Sources */,
+				C7DB6E1D2B8C51F000EC2309 /* MyTasksView.swift in Sources */,
+				C7DB6E212B8C520700EC2309 /* DetailTaskView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +340,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WeekFive/Preview Content\"";
+				DEVELOPMENT_TEAM = 2957CWG7DB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -300,6 +369,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WeekFive/Preview Content\"";
+				DEVELOPMENT_TEAM = 2957CWG7DB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
