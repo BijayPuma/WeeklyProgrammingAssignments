@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AddNewTaskView: View {
+    
     @Environment(ModelData.self) var taskModel
     @Environment(\.dismiss) var dismiss
     

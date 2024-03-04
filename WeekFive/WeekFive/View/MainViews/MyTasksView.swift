@@ -24,7 +24,7 @@ struct MyTasksView: View {
                         TaskRowView(task: task)
                                     }
                             }
-                AddNewTaskBotton(isCompleted: $isCompleted)
+                AddNewTaskBotton()
             }
             .navigationTitle("My Tasks")
             .padding()

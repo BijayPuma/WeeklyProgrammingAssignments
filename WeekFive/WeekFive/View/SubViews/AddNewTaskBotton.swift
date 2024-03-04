@@ -11,7 +11,6 @@ struct AddNewTaskBotton: View {
     
    
     @State private var showingSheet = false
-    @Binding var isCompleted: Bool
     
     var body: some View {
         Button {
@@ -32,7 +31,7 @@ struct AddNewTaskBotton: View {
 }
 
 #Preview {
-    AddNewTaskBotton(isCompleted: .constant(false))
+    AddNewTaskBotton()
 }
 
 
