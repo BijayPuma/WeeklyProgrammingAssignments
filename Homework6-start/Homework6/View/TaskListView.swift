@@ -5,31 +5,25 @@
 import SwiftUI
 
 struct TaskListView: View {
-  @ObservedObject var taskStore: TaskStore
-    //Test
-  var body: some View {
-    VStack {
-      ScrollView {
-        ForEach(taskStore.tasks, id: \.self) { task in
-          NavigationLink(value: task) {
-            VStack {
-              TaskRowView(task: task)
-              Divider()
-            }
-            .padding([.leading, .trailing], 20)
-          }
+    @ObservedObject var taskStore: TaskStore
+    var showCompleted: Bool
+    @Binding var searchText: String
+
+    var filteredTasks: [Task] {
+        taskStore.tasks.filter { task in
+            (task.isCompleted == showCompleted) &&
+            (searchText.isEmpty || task.title.localizedCaseInsensitiveContains(searchText))
         }
-        .navigationDestination(for: Task.self) { task in
-          TaskDetailView(task: $taskStore.tasks
-            .first(where: { $0.id == task.id })!)
-        }
-      }
     }
-  }
+
+    var body: some View {
+        List(filteredTasks) { task in
+            TaskRowView(taskStore: taskStore, task: task)
+        }
+    }
 }
 
-struct TaskListView_Previews: PreviewProvider {
-  static var previews: some View {
-    TaskListView(taskStore: TaskStore())
-  }
+
+#Preview {
+    TaskListView(taskStore: TaskStore(), showCompleted: false, searchText: .constant(""))
 }

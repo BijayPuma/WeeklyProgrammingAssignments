@@ -3,6 +3,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Task: Identifiable, Hashable {
   let id = UUID()
@@ -86,4 +87,5 @@ class TaskStore: ObservableObject {
       tasks[index].isCompleted.toggle()
     }
   }
-                 }
+
+}
