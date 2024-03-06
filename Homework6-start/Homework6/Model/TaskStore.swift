@@ -6,7 +6,7 @@ import Foundation
 import SwiftUI
 
 struct Task: Identifiable, Hashable {
-  let id = UUID()
+  var id = UUID()
   var title: String
   var category: Category
   var isCompleted: Bool = false
