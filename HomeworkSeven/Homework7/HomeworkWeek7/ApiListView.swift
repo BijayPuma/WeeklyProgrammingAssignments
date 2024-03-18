@@ -8,11 +8,19 @@ struct ApiListView: View {
 
   @State private var apiList: ApiListModel?
   @State private var showAlert = false
+  @State private var isLoading = false
   
     var body: some View {
       
       NavigationStack {
-        List(apiList?.entries ?? []) { entry in
+        if isLoading {
+          VStack {
+            ProgressView()
+            Text("Loading APIs...")
+          }
+        } else if let apiList = apiList {
+          
+          List(apiList.entries ) { entry in
             NavigationLink {
               ApiDetailView(entry: entry)
             } label: {
@@ -20,6 +28,9 @@ struct ApiListView: View {
             }
           }
           .navigationTitle("API Names")
+        } else {
+          Text("No data Available")
+        }
       }
       .task {
         await loadData()
@@ -33,11 +44,13 @@ struct ApiListView: View {
     }
   
   @MainActor func loadData() async {
+    isLoading = true
     do {
       apiList = try await Storage.shared.loadApiListAsync()
     } catch {
         showAlert = true
     }
+    isLoading = false
   }
   
 }
