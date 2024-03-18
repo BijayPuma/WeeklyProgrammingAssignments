@@ -2,10 +2,43 @@
 
 import Foundation
 
+
 class Storage {
+  
+  enum PublicApiError: Error {
+    case invalidURL
+    case invalidResponse
+    case failedDecoding
+  }
   
   static let shared = Storage()
   private let fileName = "storage.json"
+  
+  func fetchApiListFromNetwork() async throws -> ApiListModel {
+    
+    let urlString = "https://api.publicapis.org/entries"
+    guard let url = URL(string: urlString) else {
+      throw PublicApiError.invalidURL
+    }
+    let cofiguration = URLSessionConfiguration.default
+    let session = URLSession(configuration: cofiguration)
+    
+    let (data, response) = try await session.data(from: url)
+    
+    guard let httpResponse = response as? HTTPURLResponse,
+          httpResponse.statusCode == 200 else {
+      throw PublicApiError.invalidResponse
+    }
+    
+    do {
+      let decoder = JSONDecoder()
+      let publicApiResponse = try decoder.decode(ApiListModel.self, from: data)
+      return publicApiResponse
+    } catch {
+      throw PublicApiError.failedDecoding
+    }
+    
+  }
   
   func writeJsonToDocumentDirectory(_ jsonData: ApiListModel) {
 
@@ -31,7 +64,8 @@ class Storage {
     print(Bundle.main.bundleURL)
     
     guard let file = Bundle.main.url(forResource: fileName, withExtension: nil) else {
-      fatalError("Couldn't find \(fileName) in app bundle")
+      print("Failed to load from Bundle")
+      return nil
     }
     
     do {
@@ -66,17 +100,31 @@ class Storage {
     
   }
   
-  func loadApiList(fileName: String) -> ApiListModel? {
-    if let apiList = loadJsonFromBundle(fileName) {
+}
+
+
+extension Storage {
+  
+  func loadApiListAsync() async throws -> ApiListModel {
+    
+    do {
+      let apiList = try await fetchApiListFromNetwork()
+      print("Data fetched from network.")
       return apiList
-    } else if let apiList = loadJsonFromBundle(fileName) {
-      return apiList
-    } else {
-      print("data can not be loaded")
-      return nil
+      
+    } catch {
+      print("Failed to fetch data from network: \(error)")
+      if let apliList = loadJsonFromDocumentDirectory(fileName: "storage.json") {
+        print("Data loaded from document directory.")
+        return apliList
+      } else if let apiList = loadJsonFromBundle("apilist.json") {
+        print("Data loaded from bundle.")
+        return apiList
+      } else {
+        throw error
+      }
+   
     }
   }
   
-  
 }
-
