@@ -28,7 +28,6 @@ struct Entry: Codable, Hashable, Identifiable {
     }
 }
 
-@Observable
-class DataModel {
-  var loadApis: ApiListModel = Storage.shared.loadJsonFromBundle("apilist.json")!
-}
+
+
+

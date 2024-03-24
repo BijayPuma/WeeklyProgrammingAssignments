@@ -4,25 +4,59 @@ import SwiftUI
 
 
 struct ApiListView: View {
-   var dataModel: DataModel
+
+
+  @State private var apiList: ApiListModel?
+  @State private var showAlert = false
+  @State private var isLoading = false
   
     var body: some View {
       
       NavigationStack {
-        List(dataModel.loadApis.entries) { entry in
-          NavigationLink {
-            ApiDetailView(entry: entry)
-          } label: {
-            Text(entry.api)
+        if isLoading {
+          VStack {
+            ProgressView()
+            Text("Loading APIs...")
           }
+        } else if let apiList = apiList {
+          
+          List(apiList.entries ) { entry in
+            NavigationLink {
+              ApiDetailView(entry: entry)
+            } label: {
+              Text(entry.api)
+            }
+          }
+          .navigationTitle("API Names")
+        } else {
+          Text("No data Available")
         }
-        .navigationTitle("API Names")
       }
+      .task {
+        await loadData()
+      }
+      .alert("Error", isPresented: $showAlert) {
+        Button("Ok", role: .cancel) { }
+      } message: {
+        Text("Failed to load API list")
+      }
+      
     }
+  
+  @MainActor func loadData() async {
+    isLoading = true
+    do {
+      apiList = try await Storage.shared.loadApiListAsync()
+    } catch {
+        showAlert = true
+    }
+    isLoading = false
+  }
+  
 }
 
 #Preview {
-  ApiListView(dataModel: .init())
+  ApiListView()
 }
 
 
